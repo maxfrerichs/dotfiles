@@ -1,0 +1,13 @@
+# theme
+font = /usr/share/fonts/BlexMono/BlexMonoNerdFont-Regular.ttf
+text-color = #cdd6f4
+prompt-color = #cdd6f4
+selection-color = #304674
+background-color = #111111
+font-size = 14
+width = 400
+height = 300
+border-color = #304674
+border-width = 3
+outline-width = 0
+
