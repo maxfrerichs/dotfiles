@@ -1,1 +1,6 @@
 .config/netsurf
+.config/go
+.config/libvirt
+.config/htop
+.config/pulse
+.config/mimeapps.list

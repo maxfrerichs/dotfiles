@@ -16,12 +16,12 @@ bindswitch --reload --locked lid:off output $laptop enable
 exec_always /home/cybercactus/.config/sway/clamshell-switch.sh
 exec_always dunst
 # Appearance
-font pango:Roboto 13
+font pango:Roboto Regular 13
 titlebar_padding 1
 output * bg /home/maxfrerichs/Pictures/wallpaper.png fill
-gaps inner 10
+gaps inner 8
 default_border pixel 3 
-client.focused "#304674" "#304674" "#304674" "#304674"
+client.focused "#317ace" "#317ace" "#317ace" "#317ace"
 
 exec swayidle -w \
           timeout 30000 'swaylock -f -c 000000' \
@@ -45,7 +45,7 @@ input 1452:591:Keychron_Keychron_K8 {
     bindsym $mod+space exec $menu
     floating_modifier $mod normal
     bindsym $mod+Shift+c reload
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'Do you want to log off?.' -B 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+e exec wlogout
     # Move your focus around
     bindsym $mod+$left focus left
     bindsym $mod+$down focus down
@@ -161,7 +161,7 @@ bar {
         statusline #ffffff
         background #121212
         inactive_workspace #323232 #323232 #5c5c5c
-	focused_workspace #304674 #304674 #fcfcfc
+	focused_workspace #317ace #317ace #ffffff
     }
 }
 
