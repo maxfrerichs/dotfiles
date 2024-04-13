@@ -1,3 +1,5 @@
+.config/aerc
+.config/dconf
 .config/netsurf
 .config/go
 .config/libvirt
