@@ -14,13 +14,14 @@ set $laptop LVDS-1
 bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 exec_always /home/cybercactus/.config/sway/clamshell-switch.sh
-exec_always dunst
+exec swaync
+
 # Appearance
 font pango:Roboto Regular 13
-titlebar_padding 1
+# titlebar_padding 1
 output * bg /home/maxfrerichs/Pictures/wallpaper.png fill
 gaps inner 8
-default_border pixel 3 
+default_border pixel 3
 client.focused "#317ace" "#317ace" "#317ace" "#317ace"
 
 exec swayidle -w \
@@ -67,6 +68,7 @@ input 1452:591:Keychron_Keychron_K8 {
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
+    bindsym $mod+Shift+n exec swaync-client -t -sw
 #
 # Workspaces:
 #

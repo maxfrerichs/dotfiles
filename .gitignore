@@ -5,4 +5,6 @@
 .config/libvirt
 .config/htop
 .config/pulse
+.config/chromium
+.config/btop
 .config/mimeapps.list
