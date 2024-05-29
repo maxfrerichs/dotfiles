@@ -13,6 +13,7 @@ general {
 
 order += "wireless _first_"
 order += "battery all"
+order += "volume master"
 order += "tztime local"
 
 wireless _first_ {
@@ -33,6 +34,14 @@ battery all {
 	integer_battery_capacity = true
 	last_full_capacity = true
 	separator_block_width = 16
+}
+
+volume master {
+	format = "VOL: %volume"
+	format_muted = "VOL: muted"
+	device = "default"
+	mixer = "Master"
+	mixer_idx = 0
 }
 
 disk "/" {
