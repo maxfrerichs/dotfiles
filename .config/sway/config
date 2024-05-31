@@ -20,7 +20,6 @@ exec swaync
 font pango:Roboto Regular 13
 # titlebar_padding 1
 output * bg /home/maxfrerichs/Pictures/wallpaper.png fill
-gaps inner 8
 default_border pixel 3
 client.focused "#317ace" "#317ace" "#317ace" "#317ace"
 

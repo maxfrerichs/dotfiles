@@ -18,8 +18,8 @@ order += "tztime local"
 
 wireless _first_ {
 	separator_block_width = 16
-        format_up = "CONN: wifi (at) %essid"
-        format_down = "CONN: offline "
+        format_up = "NET: %ip"
+        format_down = "NET: offline "
 	format_bitrate = "%g %cb/s"
 
 }
