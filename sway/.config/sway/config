@@ -5,23 +5,27 @@ set $down j
 set $up k
 set $right l
 set $term alacritty
-set $menu tofi-drun | xargs swaymsg exec --
+set $menu anyrun | xargs swaymsg exec --
 
 include /etc/sway/config-vars.d/*
 
 ### Output configuration
-set $laptop LVDS-1
+set $laptop eDP-1
 bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 exec_always /home/cybercactus/.config/sway/clamshell-switch.sh
-exec swaync
+exec rm -f /tmp/wcp && mkfifo /tmp/wcp && tail -f /tmp/wcp | wcp
+bindsym $mod+p exec "echo 2 > /tmp/wcp"
+
 
 # Appearance
-font pango:Roboto Regular 13
+font pango:Roboto Regular 16
 # titlebar_padding 1
-output * bg /home/maxfrerichs/Pictures/wallpaper.png fill
-default_border pixel 3
-client.focused "#317ace" "#317ace" "#317ace" "#317ace"
+output * bg $HOME/.config/sway/assets/wallpaper.png fill
+
+default_border none
+gaps inner 10
+client.focused "#317ace" "#317ace" "#ffffff" "#317ace"
 
 exec swayidle -w \
           timeout 30000 'swaylock -f -c 000000' \
@@ -33,6 +37,12 @@ exec /usr/libexec/pipewire-launcher
 input 1:1:AT_Translated_Set_2_keyboard {
    xkb_layout "de"
 }
+
+input 1739:52710:DLL0945:00_06CB:CDE6_Touchpad {
+    tap enabled
+    accel_profile "flat"
+    natural_scroll enabled
+} 
 
 input 1452:591:Keychron_Keychron_K8 {
    xkb_layout "us"
@@ -67,7 +77,6 @@ input 1452:591:Keychron_Keychron_K8 {
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
-    bindsym $mod+Shift+n exec swaync-client -t -sw
 #
 # Workspaces:
 #
@@ -128,10 +137,11 @@ input 1452:591:Keychron_Keychron_K8 {
 
     bindsym XF86MonBrightnessUp exec brightnessctl set 10%+
     bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
-    bindsym XF86AudioRaiseVolume exec pamixer -i 5
-    bindsym XF86AudioLowerVolume exec pamixer -d 5
+    bindsym XF86AudioRaiseVolume exec pamixer -i 10
+    bindsym XF86AudioLowerVolume exec pamixer -d 10
     bindsym XF86AudioMute exec pamixer --toggle-mute
     bindsym XF86ScreenSaver exec swaylock --screenshots --effect-greyscale --fade-in 0.2
+    bindsym $mod+Shift+p exec grimshot save screen $HOME/Pictures/Screenshots/$(date +%d-%m-%Y-%H-%M-%S).png
 #
 # Resizing containers:
 #
@@ -157,14 +167,12 @@ bindsym $mod+r mode "resize"
 bar {
     position bottom 
     status_command i3status
-    workspace_min_width 24
+    workspace_min_width 28
     colors {
         statusline #ffffff
-        background #121212
-        inactive_workspace #323232 #323232 #5c5c5c
+        background #161616
+        inactive_workspace #161616 #161616 #5c5c5c
 	focused_workspace #317ace #317ace #ffffff
     }
 }
-
-
 include /etc/sway/config.d/*

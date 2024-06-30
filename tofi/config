@@ -1,10 +1,10 @@
 # theme
-font = /usr/share/fonts/BlexMono/BlexMonoNerdFont-Regular.ttf
+font = /usr/share/fonts/Helvetica/HelveticaNeueMedium.otf
 text-color = #cdd6f4
 prompt-color = #cdd6f4
 selection-color = #317ace
 background-color = #111111
-font-size = 14
+font-size = 16
 width = 400
 height = 300
 border-color = #317ace
