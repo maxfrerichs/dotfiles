@@ -1,2 +1,7 @@
-My personal linux config. This includes configs for Sway, Alacritty, i3status, dunst, tofi and more.
+My personal workstation config for Linux. Includes configs for nvim, sway, i3status.
 
+How to install:
+
+- Clone this repo into your home dir
+- cd into dotfiles
+- Use stow to create symlink, for example stow nvim
