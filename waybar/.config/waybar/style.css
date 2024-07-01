@@ -1,0 +1,65 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-weight: 500;
+    font-family: IBM Plex Mono, Arial, sans-serif;
+    font-size: 20px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: #161616;
+    color: white;
+}
+
+tooltip {
+  background: #121212;
+  color: white;
+}
+
+tooltip label {
+  color: white;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    background: transparent;
+    color: white;
+}
+
+#workspaces button.focused {
+    background: #317ace;
+}
+
+#mode, #window {
+    padding: 0px 12px;
+}
+
+#clock, #network, #pulseaudio, #bluetooth, #battery {
+    padding: 0 6px;
+}
+
+#mode {
+    background: #ee5396;
+}
+
+#battery.charging {
+    background-color: #78a9ff;
+}
+
+#network {
+	font-size: 18px;
+	color: #fff;
+}
+
+#network.warning {
+	color: #08bdba;
+}
+
+#network.error {
+	color: #ee5396;
+}
+
+#battery.warning:not(.charging) {
+    color: #25be6a;
+}
