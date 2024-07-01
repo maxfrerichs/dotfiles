@@ -1,12 +1,13 @@
 # theme
-font = /usr/share/fonts/Helvetica/HelveticaNeueMedium.otf
+font = /usr/share/fonts/Roboto/Roboto-Regular.ttf
 text-color = #cdd6f4
+prompt = "Applications"
 prompt-color = #cdd6f4
 selection-color = #317ace
 background-color = #111111
-font-size = 16
-width = 400
-height = 300
+font-size = 18
+width = 600
+height = 400
 border-color = #317ace
 border-width = 3
 outline-width = 0

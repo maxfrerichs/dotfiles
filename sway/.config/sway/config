@@ -5,8 +5,9 @@ set $down j
 set $up k
 set $right l
 set $term alacritty
-set $menu anyrun | xargs swaymsg exec --
-
+set $menu tofi-drun | xargs swaymsg exec --
+set $runner anyrun | xargs swaymsg exec --
+set $lock swaylock --screenshot --clock --indicator --effect-blur 7x5 --ring-color 317ace
 include /etc/sway/config-vars.d/*
 
 ### Output configuration
@@ -28,9 +29,9 @@ gaps inner 10
 client.focused "#317ace" "#317ace" "#ffffff" "#317ace"
 
 exec swayidle -w \
-          timeout 30000 'swaylock -f -c 000000' \
+          timeout 30000 '$lock' \
           timeout 60000 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-          before-sleep 'swaylock -f -c 000000'
+          before-sleep '$lock'
 
 exec /usr/libexec/pipewire-launcher
 ### Input configuration
@@ -115,7 +116,7 @@ input 1452:591:Keychron_Keychron_K8 {
 
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
+    bindsym $mod+t layout tabbed
     bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
