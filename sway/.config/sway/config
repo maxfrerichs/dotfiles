@@ -20,7 +20,7 @@ bindsym $mod+p exec "echo 2 > /tmp/wcp"
 
 
 # Appearance
-font pango:Roboto Regular 16
+font pango:IBM Plex Mono 14
 # titlebar_padding 1
 output * bg $HOME/.config/sway/assets/wallpaper.png fill
 
@@ -47,7 +47,6 @@ input 1739:52710:DLL0945:00_06CB:CDE6_Touchpad {
 
 input 1452:591:Keychron_Keychron_K8 {
    xkb_layout "us"
-   xkb_variant "altgr-intl"
 }
 
 ### Key bindings
@@ -173,7 +172,7 @@ bar {
         statusline #ffffff
         background #161616
         inactive_workspace #161616 #161616 #5c5c5c
-	focused_workspace #317ace #317ace #ffffff
+	    focused_workspace #78a9ff #78a9ff #ffffff
     }
 }
 include /etc/sway/config.d/*

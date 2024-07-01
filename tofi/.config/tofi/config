@@ -3,12 +3,12 @@ font = /usr/share/fonts/Roboto/Roboto-Regular.ttf
 text-color = #cdd6f4
 prompt = "Applications"
 prompt-color = #cdd6f4
-selection-color = #317ace
+selection-color = #8cb6ff
 background-color = #111111
 font-size = 18
 width = 600
 height = 400
-border-color = #317ace
+border-color = #8cb6ff
 border-width = 3
 outline-width = 0
 
