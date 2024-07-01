@@ -29,7 +29,7 @@ white   = '#e4e4e5'
 size = 14
 
 [font.normal]
-family = "IBM Plex Mono"
+family = "BlexMono Nerd Font Mono"
 style = "Medium"
 
 [window]
