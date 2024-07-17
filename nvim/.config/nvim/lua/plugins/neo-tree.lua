@@ -7,6 +7,16 @@ return  {
         "MunifTanjim/nui.nvim",
     },
     config = function()
-        vim.keymap.set('n', '<C-b>', '<Cmd>Neotree toggle last<CR>')
+        require("neo-tree").setup({
+            close_if_last_window = true;
+            default_component_configs = {
+                icon = {
+                    folder_closed = "+",
+                    folder_open = "-",
+                }
+            }
+        })
+        vim.keymap.set('n', '<C-b>', ':Neotree filesystem reveal left<CR>', {})
+		vim.keymap.set("n", "<leader>bf", ":Neotree buffers reveal float<CR>", {})
     end
 }

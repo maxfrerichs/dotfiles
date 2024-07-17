@@ -1,5 +1,5 @@
 # variables
-set $mod Mod4
+set $mod Mod1
 set $left h
 set $down j
 set $up k
@@ -47,6 +47,7 @@ input 1739:52710:DLL0945:00_06CB:CDE6_Touchpad {
 
 input 1452:591:Keychron_Keychron_K8 {
    xkb_layout "us"
+   xkb_variant "altgr-intl"
 }
 
 ### Key bindings

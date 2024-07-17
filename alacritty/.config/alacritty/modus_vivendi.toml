@@ -2,6 +2,7 @@
 background   = '0x000000'
 foreground   = '0xffffff'
 
+# Normal colors
 [colors.normal]
 black     = '0x000000'
 red       = '0xff5f59'
@@ -12,6 +13,7 @@ magenta   = '0xfeacd0'
 cyan      = '0x00d3d0'
 white     = '0xffffff'
 
+# Bright colors
 [colors.bright]
 black     = '0x1e1e1e'
 red       = '0xff5f5f'
@@ -29,13 +31,3 @@ color     = '0xfec43f'
 [[colors.indexed_colors]]
 index     = 17
 color     = '0xff9580'
-
-[font]
-size = 14
-
-[font.normal]
-family = "BlexMono Nerd Font Mono"
-style = "Medium"
-
-[window]
-dynamic_title = true

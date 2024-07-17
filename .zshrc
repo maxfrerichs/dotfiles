@@ -37,3 +37,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # bun completions
 [ -s "/home/maxfrerichs/.bun/_bun" ] && source "/home/maxfrerichs/.bun/_bun"
+export PATH=$HOME/.local/bin:$PATH
